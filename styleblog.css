@@ -1,0 +1,370 @@
+body{
+    width: 1280px;
+    height: 1544px;
+    border: 1px solid #000;
+    background: #FFFFFF;
+    font-family: Poppins;
+    margin-left: 125px;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+}
+/********************************** Menu principal ****************************/
+
+#menu{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around; 
+    align-self: center; 
+    width: 710px;
+    height: 30px; 
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.menu p{
+    font-size: large;
+    font-weight: bold;
+}
+
+#menu, p{
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: -0.42px;
+}
+
+.principal:hover, .checkout:hover, .contact:hover, .about:hover{
+    color: #6066FA;
+}
+
+a{
+    text-decoration: none;
+}
+
+/********************************Articles****************************/
+
+/*main{
+    border: solid; 
+}*/
+
+#articles{
+    display: flex;   
+    /*width: 706px;
+    height: 845px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction:column;*/
+    justify-content: center;
+    gap: 15px
+}
+
+article{
+    width: 706px;
+    height: 845px;
+    display: flex;
+    justify-content: center;
+    flex-direction:column; 
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.article{
+    width: 345px;
+    height: 415px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.05); 
+    gap: 15px;
+}
+
+.texte-article{
+    padding: 10px;
+}
+
+.texte-article p{
+    color: #808080;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; 
+    letter-spacing: -0.42px;
+}
+
+h2{
+    font-size: 12px;
+}
+
+/* Catégorie de chaque article */
+
+.categorie-cuisine{
+    width: 57px;
+    height: 16px;
+    color: #FA5158;
+    background-color: #FEE6E7;
+    border-radius: 3px;
+    display: inline-flex;
+    padding: 0px 10px 1px 10px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.categorie-jardin{
+    width: 57px;
+    height: 16px;
+    color: #44D382;
+    background-color: #eafaf1;
+    border-radius: 3px;
+    display: inline-flex;
+    padding: 0px 10px 1px 10px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.categorie-loisirs{
+    width: 57px;
+    height: 16px;
+    color: #56CFE1;
+    background: #E9F9FB;
+    border-radius: 3px;
+    display: inline-flex;
+    padding: 0px 10px 1px 10px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.categorie-voyages{
+    width: 57px;
+    height: 16px;
+    color: #F39E30;
+    background-color: #fef4e7;
+    border-radius: 3px;
+    display: inline-flex;
+    padding: 0px 10px 1px 10px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Titre et image de chaque article */
+
+h1{
+    color: #333;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; 
+    letter-spacing: -0.6px;
+    }
+
+img{
+    width: 345px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/**************************** Checkout ********************/
+
+#checkout{
+    border-spacing: 5px 10px;
+}
+
+
+/**************************** Footer **********************/
+
+footer{
+    width: 1280px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.footer{
+    display: flex;
+    justify-content: flex-end;  
+}
+
+.logo-small{
+    width: 100px;
+    height: 52px;
+    margin: 15px;
+}
+
+.icone{
+    width: 25px;
+    height: 25px;
+    color: #333333;
+    margin: 2px;
+}
+
+#icones a:hover{
+    color: #6066FA;
+}
+
+#icones{
+    display: flex;
+    justify-content: center;
+    flex-direction:column; 
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    width: 72px;
+    height: 30px;
+    padding: 10px;  
+}
+
+.navigation{
+    padding: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.navigation h3{
+    color: #333;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: bold;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.42px;
+}
+
+.navigation p{
+    color: #808080;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; 
+    letter-spacing: -0.39px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #808080;
+}
+
+.navigation a:hover{
+    color: #6066FA;
+}
+
+.informations{
+    padding: 10px;
+}
+
+.informations h3{
+    color: #333;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: bold;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.42px;
+}
+
+.informations p{
+    color: #808080;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.39px;
+}
+
+#follow{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center; 
+}
+
+.follow{
+    padding: 10px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100px; 
+}
+
+.contact h3{
+    color: #333;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: bold;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.42px;
+}
+
+/* Copyright */
+
+#copyright{
+    display: flex;
+    justify-content: center;
+}
+
+.copyright{
+    border-top: solid;
+    border-color: #e6e6e6;
+    width: 705px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between; 
+    align-self: center; 
+}
+
+.copyright p{
+    color: #808080;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; 
+    letter-spacing: -0.27px;  
+}
+
+/***************************** RESPONSIVE - MEDIA QUERIES ****************************/
+
+@media screen and (max-width: 600px) {
+    body {
+        border-color: red;
+        width: 360px;
+        height: 800px;
+        background: #FFFFFF;
+        font-family: Poppins;
+        margin-left: 125px;
+    }
+    #logo{
+        display: flex;
+        justify-content: center;
+        }
+    #logo img{
+        width: 126px;
+        height: 71px;
+    }    
+}
+
+
+
+
