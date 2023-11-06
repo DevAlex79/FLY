@@ -51,6 +51,10 @@ updateTotals();
 
 */
 
+/************************ Version factorisée ************************************/
+
+/*Utilisation de classes et d'attributs de données pour regrouper les éléments similaires (les entrées, les prix et les totaux des articles). Utilisation d'une boucle pour ajouter des gestionnaires d'événements à toutes les entrées d'article et mettre à jour les totaux de manière dynamique. Réduction de duplication de code. Rend le code plus extensible (ajout d'articles possible).*/
+
 const itemInputs = document.querySelectorAll('.item-input');
     const itemPrices = document.querySelectorAll('.item-price');
     const itemTotals = document.querySelectorAll('.item-total');
