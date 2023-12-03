@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check out</title>
-    <link rel="stylesheet" href="styleblog.css">
+    <link rel="stylesheet" href="stylecheckout.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -54,36 +54,71 @@
       <tr>
         <th>Article</th>
         <th>Quantité</th>
-        <th>Prix unitaire</th>
-        <th>Prix total</th>
+        <th>Prix U</th>
+        <th>Total HT</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>T-shirt</td>
+        <td>Produit A</td>
         <td><input type="number" class="item-input" data-unit-price="15" value="0" min="0"></td>
         <td class="item-price">15</td>
         <td class="item-total">0</td>
+        <td>
+          <button class="remove-row">X</button>
+      </td>
       </tr>
       <tr>
-        <td>Pantalon</td>
+        <td>Produit B</td>
         <td><input type="number" class="item-input" data-unit-price="30" value="0" min="0"></td>
-        <td class="item-price">30</td>
+        <td class="item-price">30</td> 
         <td class="item-total">0</td>
+        <td>
+          <button class="remove-row">X</button>
+      </td>
       </tr>
       <tr>
-        <td>Chaussettes</td>
+        <td>Produit C</td>
         <td><input type="number" class="item-input" data-unit-price="7" value="0" min="0"></td>
         <td class="item-price">7</td>
         <td class="item-total">0</td>
+        <td>
+          <button class="remove-row">X</button>
+      </td>
       </tr>
       <tr>
-        <td>Total</td>
+        <td>Livraison</td>
+        <td>
+          <label>
+            <input type="radio" name="livraison-type" value="relais"> Relais Colis (5€)
+          </label>
+          <label>
+            <input type="radio" name="livraison-type" value="domicile"> À Domicile (12€)
+          </label>
+        </td>
+        <td id="livraison-price"></td>
+        <td id="livraison-total">0</td>
+      </tr>
+      <tr>
+        <td>Total Articles</td>
         <td id="total-nombre-articles">0</td>
+        <td></td>
+        <td id="prix-total-articles">0</td>
+      </tr>
+      <tr>
+        <td>Total Général</td>
+        <td></td>
         <td></td>
         <td id="prix-total">0</td>
       </tr>
     </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5">
+          <button id="addRow">Ajouter une ligne</button>
+        </td>
+      </tr>
+    </tfoot>
   </table>
 
 </body>

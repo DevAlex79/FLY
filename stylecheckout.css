@@ -1,0 +1,32 @@
+body{
+    width: 1280px;
+    height: 1544px;
+    border: 1px solid #000;
+    background: #FFFFFF;
+    font-family: Poppins;
+    margin-left: 125px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.remove-row {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    border: none;
+    background: none;
+    font-size: larger;
+}
