@@ -5,123 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check out</title>
     <link rel="stylesheet" href="stylecheckout.css">
-    <script src="script.js" defer></script>
+    <script src="line.js" defer></script>
+    <script src="lines.js" defer></script>
+    <script src="shipment.js" defer></script>
+    <script src="cart.js" defer></script>
+    <!--<script src="script.js" defer></script>-->
 </head>
 <body>
     <h1>CHECK OUT</h1>
 
-    <!--
 <table id="checkout">
-    <thead>
-      <tr>
-        <th>Article</th>
-        <th>Quantité</th>
-        <th>Prix unitaire</th>
-        <th>Prix total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>T-shirt</td>
-        <td><input type="number" id="t-shirt-input" value="0" min="0"></td>
-        <td id="t-shirt-price">15</td>
-        <td id="t-shirt-total">0</td>
-      </tr>
-      <tr>
-        <td>Pantalon</td>
-        <td><input type="number" id="pantalon-input" value="0" min="0"></td>
-        <td id="pantalon-price">30</td>
-        <td id="pantalon-total">0</td>
-      </tr>
-      <tr>
-        <td>Chaussettes</td>
-        <td><input type="number" id="chaussettes-input" value="0" min="0"></td>
-        <td id="chaussettes-price">7</td>
-        <td id="chaussettes-total">0</td>
-      </tr>
-      <tr>
-        <td>Total</td>
-        <td id="total-nombre-articles">0</td>
-        <td></td>
-        <td id="prix-total">0</td>
-      </tr>
-    </tbody>
-  </table>
--->
+  <thead>
+    <tr>
+      <th>Article</th>
+      <th>Quantité</th>
+      <th>Prix unitaire</th>
+      <th>Prix total</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="cartBody">
+    <!-- Les lignes seront ajoutées ici dynamiquement -->
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="5">
+        <button id="addRow">Ajouter une ligne</button>
+      </td>
+    </tr>
+  </tfoot>
+</table>
 
-<table id="checkout">
-    <thead>
-      <tr>
-        <th>Article</th>
-        <th>Quantité</th>
-        <th>Prix U</th>
-        <th>Total HT</th>
-      </tr>
-    </thead>
+<div>
+  <label>
+    <input type="radio" name="livraison-type" value="relais" checked> Relais Colis (5€)
+  </label>
+  <label>
+    <input type="radio" name="livraison-type" value="domicile"> À Domicile (12€)
+  </label>
+</div>
+
+<div class="totals-container">
+  <table>
     <tbody>
       <tr>
-        <td>Produit A</td>
-        <td><input type="number" class="item-input" data-unit-price="15" value="0" min="0"></td>
-        <td class="item-price">15</td>
-        <td class="item-total">0</td>
-        <td>
-          <button class="remove-row">X</button>
-      </td>
-      </tr>
-      <tr>
-        <td>Produit B</td>
-        <td><input type="number" class="item-input" data-unit-price="30" value="0" min="0"></td>
-        <td class="item-price">30</td> 
-        <td class="item-total">0</td>
-        <td>
-          <button class="remove-row">X</button>
-      </td>
-      </tr>
-      <tr>
-        <td>Produit C</td>
-        <td><input type="number" class="item-input" data-unit-price="7" value="0" min="0"></td>
-        <td class="item-price">7</td>
-        <td class="item-total">0</td>
-        <td>
-          <button class="remove-row">X</button>
-      </td>
-      </tr>
-      <tr>
-        <td>Livraison</td>
-        <td>
-          <label>
-            <input type="radio" name="livraison-type" value="relais"> Relais Colis (5€)
-          </label>
-          <label>
-            <input type="radio" name="livraison-type" value="domicile"> À Domicile (12€)
-          </label>
-        </td>
-        <td id="livraison-price"></td>
-        <td id="livraison-total">0</td>
-      </tr>
-      <tr>
-        <td>Total Articles</td>
-        <td id="total-nombre-articles">0</td>
-        <td></td>
-        <td id="prix-total-articles">0</td>
-      </tr>
-      <tr>
-        <td>Total Général</td>
-        <td></td>
-        <td></td>
-        <td id="prix-total">0</td>
+        <td>Total Articles:</td>
+        <td><span id="total-nombre-articles">0</span></td>
+        <td>Prix Total Articles:</td>
+        <td><span id="prix-total-articles">0</span></td>
+        <td>Livraison:</td>
+        <td><span id="livraison-price">5</span>€</td>
+        <td>Total Général:</td>
+        <td><span id="prix-total">0</span>€</td>
       </tr>
     </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="5">
-          <button id="addRow">Ajouter une ligne</button>
-        </td>
-      </tr>
-    </tfoot>
   </table>
+</div>
 
 </body>
-
 
 </html>

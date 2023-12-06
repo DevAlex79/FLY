@@ -30,3 +30,20 @@ th {
     background: none;
     font-size: larger;
 }
+
+.totals-container {
+    margin-top: 20px;
+}
+
+.totals-container table {
+    border: 1px solid #ddd;
+}
+
+.totals-container td {
+    padding: 8px;
+    text-align: left;
+}
+
+.totals-container span {
+    font-weight: bold;
+}
