@@ -1,10 +1,10 @@
 body{
-    width: 1280px;
-    height: 1544px;
+    width: 70%; /* Ajustez la largeur comme vous le souhaitez */
+    margin: 0 auto; /* Ajoutez cette ligne pour centrer le contenu horizontalement */
     border: 1px solid #000;
     background: #FFFFFF;
     font-family: Poppins;
-    margin-left: 125px;
+    padding: 20px; 
 }
 
 #logo{
