@@ -7,8 +7,11 @@ class Lines {
         this.lines.push(line);
     }
 
-    removeLine(index) {
-        this.lines.splice(index, 1);
+    removeLine(lineToRemove) {
+        const indexToRemove = this.lines.indexOf(lineToRemove);
+        if (indexToRemove !== -1) {
+            this.lines.splice(indexToRemove, 1);
+        }
     }
 
     calculateTotalArticles() {

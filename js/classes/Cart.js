@@ -6,21 +6,42 @@ class Cart {
 
     // ... (définition des méthodes de la classe)
 
+    updateTotals() {
+        // Calculer les totaux
+        let totalQty = this.lines.calculateTotalArticles();
+        let totalArticlesPrice = this.lines.calculateTotalArticlesPrice();
+        let totalPrice = totalArticlesPrice + this.shipment.price;
+
+        // Mettre à jour les éléments HTML
+        document.getElementById("total-nombre-articles").textContent = totalQty;
+        document.getElementById("prix-total-articles").textContent = totalArticlesPrice;
+        document.getElementById("livraison-price").textContent = this.shipment.price;
+        document.getElementById("prix-total").textContent = totalPrice;
+
+        // Mise à jour de l'interface utilisateur
+        this.updateCartView();
+
+        console.log("Total Qty:", totalQty);
+        console.log("Total Articles Price:", totalArticlesPrice);
+        console.log("Total Price:", totalPrice);
+    }
+
+
     updateCartView() {
         const tableBody = document.getElementById("cartBody");
         tableBody.innerHTML = "";
 
-        this.lines.lines.forEach(line => {
+        this.lines.lines.forEach((line, index) => {
             const newRow = document.createElement('tr');
             newRow.innerHTML = `
                 <td>${line.name}</td>
                 <td><input type="number" class="item-input" data-unit-price="${line.unitPrice}" value="${line.quantity}" min="0"></td>
                 <td class="item-price">${line.unitPrice}</td>
                 <td class="item-total">${line.total}</td>
-                <td><button class="remove-row">X</button></td>
+                <td><button class="remove-row" data-index="${index}">X</button></td>
             `;
             tableBody.appendChild(newRow);
-
+    
             const input = newRow.querySelector('.item-input');
             input.addEventListener('input', () => {
                 const newQuantity = parseInt(input.value, 10);
@@ -28,6 +49,24 @@ class Cart {
                 this.updateTotals();
                 this.updateCartView();
             });
+    
+            const removeButton = newRow.querySelector('.remove-row');
+            removeButton.addEventListener('click', () => {
+                this.lines.removeLine(line);
+                this.updateTotals();
+                this.updateCartView();
+            });
+        });
+
+        // Ajouter un gestionnaire d'événements pour les champs de quantité
+        tableBody.addEventListener("input", event => {
+            if (event.target.classList.contains("item-input")) {
+                const index = [...tableBody.children].indexOf(event.target.closest("tr"));
+                const newQuantity = parseInt(event.target.value, 10);
+                this.lines.lines[index].updateQuantity(newQuantity);
+                this.updateTotals();
+                this.updateCartView();
+            }
         });
 
         // Ajouter un gestionnaire d'événements pour les boutons de suppression de ligne
