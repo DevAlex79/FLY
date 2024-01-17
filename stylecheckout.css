@@ -61,7 +61,7 @@ body {
     padding: 20px; /* Ajoutez de l'espace autour du contenu */
 }
 
-table {
+table, h1 {
     width: 70%;
     margin: 0 auto;
     border-collapse: collapse;

@@ -81,7 +81,8 @@ article{
 }
 
 .article{
-    width: 345px;
+    width: calc(50% - 15px); /* Deux colonnes, avec un espace entre elles */
+    /*width: 345px;*/
     height: 415px;
     display: flex;
     justify-content: center;
@@ -186,12 +187,22 @@ img{
 
 /**************************** Footer **********************/
 
-footer{
+/*footer{
     width: 1280px;
     height: 300px;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+}*/
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 20px;
 }
 
 .footer{
@@ -346,7 +357,7 @@ footer{
 
 /***************************** RESPONSIVE - MEDIA QUERIES ****************************/
 
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     body {
         border-color: red;
         width: 360px;
@@ -363,6 +374,67 @@ footer{
         width: 126px;
         height: 71px;
     }    
+}
+*/
+
+/* Media queries pour les tablettes  A FAIRE  */
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 90%; /* Ajustez la largeur pour les tablettes */
+    }
+
+    header {
+        flex-direction: column; /* Empilez le logo et le menu en mode portrait */
+        align-items: flex-start;
+    }
+
+    #logo img {
+        width: 50px; /* Ajustez la taille du logo pour les tablettes */
+    }
+
+    .menu {
+        width: 100%; /* Utilisez la largeur totale de l'écran pour les tablettes */
+        margin-top: 10px; /* Ajustez l'espacement entre le menu et le reste du contenu */
+    }
+
+    .article {
+        width: 100%; /* Une colonne pleine sur les tablettes */
+    }
+
+    .footer {
+        width: 100%; /* Une colonne pleine sur les tablettes */
+    }
+}
+
+/* Media queries pour les smartphones A FAIRE */
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%; /* Utilisez la largeur totale de l'écran pour les smartphones */
+    }
+
+    header {
+        align-items: center; /* Centrez le logo et le menu en mode paysage sur les smartphones */
+    }
+
+    #logo img {
+        width: 60px; /* Ajustez la taille du logo pour les smartphones */
+    }
+
+    .menu {
+        flex-direction: column; /* Empilez le menu en mode portrait sur les smartphones */
+        align-items: center;
+        margin-top: 10px; /* Ajustez l'espacement entre le menu et le reste du contenu */
+    }
+
+    .article {
+        width: 100%; /* Une colonne pleine sur les smartphones */
+    }
+
+    .footer {
+        width: 100%; /* Une colonne pleine sur les smartphones */
+    }
 }
 
 
