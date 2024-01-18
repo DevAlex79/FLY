@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cart = new Cart(); // Instancier l'objet Cart
 
     // Initialisation du panier
-    function initializeCart() {
+    /* function initializeCart() {
         // Ajouter des produits initiaux au panier
         const productA = new Line('Produit A', 15, 0);
         const productB = new Line('Produit B', 30, 0);
@@ -101,7 +101,33 @@ document.addEventListener('DOMContentLoaded', function () {
         cart.updateTotals();
         // Appeler la fonction updateCartView pour afficher la vue initiale
         cart.updateCartView();
-    }
+    } */
+
+    function initializeCart() {
+        // Effectuer une requête Ajax pour récupérer les données des produits
+        fetch('/api/getInitialProducts')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur lors de la récupération des données des produits. Statut: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(products => {
+                // Ajouter chaque produit au panier
+                products.forEach(productData => {
+                    const product = new Line(productData.name, productData.unitPrice, 0);
+                    cart.lines.addLine(product);
+                });
+    
+                // Appeler la fonction updateTotals une fois pour afficher les totaux initiaux
+                cart.updateTotals();
+                // Appeler la fonction updateCartView pour afficher la vue initiale
+                cart.updateCartView();
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des données des produits:', error.message);
+            });
+    }    
 
     // Gestionnaire d'événement pour le bouton "Ajouter une ligne"
     const addRowButton = document.getElementById('addRow');

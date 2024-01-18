@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Produit A",
+        "unitPrice": 15,
+        "image": "url_de_l_image_A.jpg"
+    },
+    {
+        "name": "Produit B",
+        "unitPrice": 30,
+        "image": "url_de_l_image_B.jpg"
+    },
+    {
+        "name": "Produit C",
+        "unitPrice": 7,
+        "image": "url_de_l_image_C.jpg"
+    }
+]
