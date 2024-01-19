@@ -103,6 +103,10 @@ body {
     color: #6066FA;
 }
 
+.active .checkout{
+    color: #6066FA;
+}
+
 a{
     text-decoration: none;
 }

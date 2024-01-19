@@ -45,6 +45,10 @@ body{
     letter-spacing: -0.42px;
 }
 
+.active .principal{
+    color: #6066FA;
+}
+
 .principal:hover, .checkout:hover, .contact:hover, .about:hover{
     color: #6066FA;
 }

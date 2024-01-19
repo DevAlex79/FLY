@@ -19,6 +19,9 @@ h2{
     margin-top: 0;
 }
 
+.active .contact{
+    color: #6066FA;
+}
 .form{
     display: flex;
     flex-direction: column;
