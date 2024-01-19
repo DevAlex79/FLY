@@ -62,6 +62,53 @@ body {
     padding: 20px; /* Ajouter de l'espace autour du contenu */
 }
 
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+/********************************** Menu principal ****************************/
+#menu{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around; 
+    align-self: center; 
+    width: 710px;
+    height: 30px; 
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.menu p{
+    font-size: large;
+    font-weight: bold;
+}
+
+#menu, p{
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: -0.42px;
+}
+
+.principal:hover, .checkout:hover, .contact:hover, .about:hover{
+    color: #6066FA;
+}
+
+a{
+    text-decoration: none;
+}
+
+/********************************** Panier ****************************/
+
 h1{
     font-family: Poppins;
     font-size: 25px;
