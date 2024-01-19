@@ -33,6 +33,7 @@ class Cart {
 
         this.lines.lines.forEach((line, index) => {
             const newRow = document.createElement('tr');
+            newRow.dataset.index = index; // Ajoute l'index comme attribut de données
             newRow.innerHTML = `
                 <td>${line.name}</td>
                 <td><input type="number" class="item-input" data-unit-price="${line.unitPrice}" value="${line.quantity}" min="0"></td>
@@ -59,7 +60,7 @@ class Cart {
         });
 
         // Ajouter un gestionnaire d'événements pour les champs de quantité
-        tableBody.addEventListener("input", event => {
+        /*tableBody.addEventListener("input", event => {
             if (event.target.classList.contains("item-input")) {
                 const index = [...tableBody.children].indexOf(event.target.closest("tr"));
                 const newQuantity = parseInt(event.target.value, 10);
@@ -67,8 +68,25 @@ class Cart {
                 this.updateTotals();
                 this.updateCartView();
             }
-        });
+        });*/
 
+        tableBody.addEventListener("input", event => {
+            if (event.target.classList.contains("item-input")) {
+                const index = parseInt(event.target.closest("tr").dataset.index, 10);
+                console.log('Index:', index);
+                console.log('Lines Length:', this.lines.lines.length);
+        
+                if (!isNaN(index) && index >= 0 && index < this.lines.lines.length) {
+                    const newQuantity = parseInt(event.target.value, 10);
+                    this.lines.lines[index].updateQuantity(newQuantity);
+                    this.updateTotals();
+                    this.updateCartView();
+                } else {
+                    console.error('Index invalide ou hors limites.');
+                }
+            }
+        });
+        
         // Ajouter un gestionnaire d'événements pour les boutons de suppression de ligne
         tableBody.addEventListener("click", event => {
             if (event.target.classList.contains("remove-row")) {
@@ -106,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     async function initializeCart() {
         try {
             // Effectuer une requête Ajax pour récupérer les données des produits
-            const response = await fetch('/api/getInitialProducts');
+            const response = await fetch('/data/cart.json');
     
             if (!response.ok) {
                 throw new Error('Erreur lors de la récupération des données des produits. Statut: ' + response.status);
@@ -128,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Erreur lors de la récupération des données des produits:', error.message);
         }
     }
-    
 
     // Gestionnaire d'événement pour le bouton "Ajouter une ligne"
     const addRowButton = document.getElementById('addRow');
