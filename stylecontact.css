@@ -1,0 +1,83 @@
+.bottle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    margin-bottom: 0;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: larger;
+    margin-top: 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 60%;
+    height: 600px;
+    background: #6066FA;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.flex2Inputs {
+    display: block;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.flexInp, .emailInp {
+    margin: 20px auto;
+    outline: 0;
+    background: #f1f1f1;
+    width: 90%;
+    border: 0;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.flexLeftInp, .flexRightInp {
+    flex-basis: 45%;
+}
+
+textarea {
+    display: block;
+    margin: 20px auto;
+    outline: 0;
+    background: #f1f1f1;
+    width: 95%;
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+button {
+    width: 45%;
+    display: block;
+    margin: 45px auto 0 auto;
+    outline: none;
+    border: 0;
+    height: 50px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+
+}
+button:hover {
+    background: #6066FA;
+}

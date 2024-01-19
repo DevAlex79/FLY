@@ -2,6 +2,7 @@ body{
     width: 70%; /* Ajustez la largeur comme vous le souhaitez */
     margin: 0 auto; /* Ajoutez cette ligne pour centrer le contenu horizontalement */
     border: 1px solid #000;
+    border-radius: 5px 5px 5px 5px;
     background: #FFFFFF;
     font-family: Poppins;
     padding: 20px; 
@@ -161,12 +162,12 @@ h2{
 
 /* Titre et image de chaque article */
 
-h1{
+.titre{
     color: #333;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 30px; 
     letter-spacing: -0.6px;
     }
@@ -203,6 +204,7 @@ footer {
     justify-content: space-around;
     align-items: flex-end;
     padding: 20px;
+    
 }
 
 .footer{
@@ -312,6 +314,7 @@ footer {
 .follow{
     padding: 10px;
     margin-left: 25px;
+    font-size: 13px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;

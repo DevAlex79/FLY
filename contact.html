@@ -5,9 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="styleblog.css">
+    <link rel="stylesheet" href="stylecontact.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>CONTACT</h1>
+    <!--Logo et menu principal-->
+    <header>
+        <div id="logo">
+            <img src="src/svg/Logo.svg" alt="logo">
+        </div>
+        <div id="menu">
+            <div class="menu">
+                <a href="blog.html"><p class="principal">Blog</p></a>
+                <a href="about.html" target="_blank"><p class="about">A propos</p></a>
+                <a href="contact.html" target="_blank"><p class="contact">Contact</p></a>
+                <a href="checkout.html" target="_blank"><p class="checkout">Panier</p></a>
+
+            </div>    
+        </div>
+    </header>
+    <main>
+        <div class="bottle">
+            <img src="src/svg/Message Sent.svg" alt="bouteille-à-la-mer">
+            <h1>Tu veux me parler</h1>
+            <h2>Envoie-moi une bouteille</h2>
+        </div>
+        <div class="form">
+            <form>
+                <div class="flex2Inputs">
+
+                    <div class="flexLeftInp">
+                        <input type="text" name="prenom" id="prenom" required maxlength="35" class="flexInp" placeholder="Entrez votre prénom">
+                    </div>
+    
+                    <div class="flexRightInp">
+                        <input type="email" name="email" id="email" class="emailInp" required maxlength="50" placeholder="Entrez votre email">
+                    </div>
+                    
+                    <textarea name="txt" id="txtArea" cols="50" rows="10"></textarea>
+
+                    <button>Envoyer</button>
+    
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <!--Footer-->
+        <!--Logo footer-->
+        <footer>
+            <div class="footer">
+                <img class="logo-small" src="src/svg/logo-small.svg" alt="petit logo">
+                <!--Navigation-->
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <p><a href="blog.html">Blog</a></p>
+                    <p>A propos</p>
+                    <p>Contact</p>
+                </div> <br/>
+                <!--Informations-->
+                <div class="informations">
+                    <h3>Informations</h3>
+                    <p>Mentions légales</p>
+                    <p>Politique de confidentialité</p>
+                </div>
+                <!--Suivez-moi-->
+                <div id="follow">
+                    <div class="follow">
+                        <h3>Suivez-moi</h3>
+                    </div>
+                    <div id="icones">    
+                        <div class="icones"> 
+                            <a href="src/svg/facebook.svg" target="_blank"><img class="icone" src="src/svg/ico-fb.svg" alt="Facebook"></a>
+                            <a href="src/svg/ico-twitter.svg" target="_blank"><img class="icone" src="src/svg/ico-twitter.svg" alt="Twitter"></a>
+                            <a href="src/svg/ico-linkedin.svg" target="_blank"><img class="icone" src="src/svg/ico-linkedin.svg" alt="LinkedIn"></a>
+                        </div>  
+                    </div>
+                </div>     
+            </div>   
+        </footer> 
+        <!--Copyright-->
+        <div id="copyright">
+            <div class="copyright">
+                <p>Copyright 2023</p>
+                <p>Réalisation : Alexandra Masi</p>
+            </div>
+        </div>    
+
+
+
 </body>
 </html>
