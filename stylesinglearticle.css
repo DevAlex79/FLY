@@ -1,0 +1,25 @@
+/* Ajoutez votre style CSS selon vos préférences pour la page d'article individuel */
+.article-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    margin-right: 20px; /* Ajustez selon votre mise en page */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.texte-article {
+    max-width: 600px; /* Ajustez selon votre mise en page */
+}
+
+.texte-article h2,
+.texte-article h1,
+.texte-article p {
+    margin: 0;
+}
