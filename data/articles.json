@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "category": "Cuisine",
+        "image": "src/jpg/vinicius-benedit--1GEAA8q3wk-unsplash.jpg",
+        "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit..."
+    },
+    {
+        "id": 2,
+        "category": "Jardin",
+        "image": "src/jpg/pelargoniums-for-europe-aHFlP2qKrxc-unsplash.jpg",
+        "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit..."
+    },
+    {
+        "id": 3,
+        "category": "Loisirs",
+        "image": "src/jpg/victor-rodriguez-pWOdBS_l9LQ-unsplash.jpg",
+        "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit..."
+    },
+    {
+        "id": 4,
+        "category": "Voyages",
+        "image": "src/jpg/luca-bravo-O453M2Liufs-unsplash.jpg",
+        "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit..."
+    }
+]
