@@ -1,3 +1,100 @@
 .active .about{
     color: #6066FA;
 }
+
+/*#articles{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+    width: 345px;
+    height: 200px;
+    
+} */
+
+#articles {
+    padding: 15px; 
+    display: flex;
+    justify-content: fcenter;
+    
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+   
+}
+.article {
+    display: block;
+    margin-bottom: 15px; /* Ajoutez une marge en bas pour créer l'espace entre les articles */
+    justify-content: center;
+    width: 706px;
+    height: 150px;
+}
+
+img{
+    width: 190px;
+    height: 150px;
+}
+
+.image{
+    width: 190px;
+    height: 150px;
+    display: flex;
+}
+
+.texte-article{
+    
+    
+    width: 500px;
+    height: 150px;
+}
+
+.texte-article p{
+    width: 500px;
+    
+    
+}
+
+/*.image {
+    flex-basis: 40%; 
+    margin-right: 15px; 
+}
+
+.image img {
+    max-width: 100%; 
+}
+
+.texte-article {
+    flex-basis: 60%; 
+}
+
+.texte-article p{
+    color: #808080;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.39px;} */
+
+
+.image-container {
+    display: flex;
+    align-items: center;
+}
+
+.image-container img {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.image-container h2,
+.image-container p {
+    flex: 1;
+}
