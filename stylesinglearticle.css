@@ -1,8 +1,17 @@
-/* Ajoutez votre style CSS selon vos préférences pour la page d'article individuel */
+#articleDetails {
+    display: flex;
+    justify-content: center;
+    flex-direction:column; 
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
 .article-details {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.05); 
 }
 
 .image {
@@ -16,6 +25,10 @@
 
 .texte-article {
     max-width: 600px; /* Ajustez selon votre mise en page */
+    color: #808080;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
 }
 
 .texte-article h2,
@@ -23,3 +36,4 @@
 .texte-article p {
     margin: 0;
 }
+
