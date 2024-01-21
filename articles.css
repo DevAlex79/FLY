@@ -1,6 +1,7 @@
 .active .about{
     color: #6066FA;
 }
+
 /*
 #articles {
     padding: 15px; 
@@ -94,6 +95,8 @@ img {
 
 .texte-article {
     width: 100%;
+    color: #808080;
+    font-family: Lato;
 }
 
 h2,
@@ -104,3 +107,5 @@ h2,
 p {
     margin: 0;
 }
+
+

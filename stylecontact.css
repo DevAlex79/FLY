@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight:900;
+    font-family: Lato;
 }
 
 img{
@@ -17,6 +19,7 @@ h1{
 h2{
     font-size: larger;
     margin-top: 0;
+    color: #6066FA;
 }
 
 .active .contact{
@@ -82,5 +85,5 @@ button {
 
 }
 button:hover {
-    background: #6066FA;
+    background: #FEE6E7;
 }

@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>A propos</title>
     <link rel="stylesheet" href="styleblog.css">
-    <link rel="stylesheet" href="stylecontact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
 </head>
 <body>
+    <h1>A PROPOS</h1>
     <!--Logo et menu principal-->
     <header>
         <div id="logo">
@@ -19,41 +18,14 @@
         </div>
         <div id="menu">
             <div class="menu">
-                <a href="blog.html"><p class="principal">Blog</p></a>
+                <a href="blog.html" class="active"><p class="principal">Blog</p></a>
                 <a href="articles.html"><p class="about">Articles</p></a>
-                <a href="contact.html" class="active"><p class="contact">Contact</p></a>
+                <a href="contact.html"><p class="contact">Contact</p></a>
                 <a href="checkout.html"><p class="checkout">Panier</p></a>
 
             </div>    
         </div>
     </header>
-    <main>
-        <div class="bottle">
-            <img src="src/svg/Message Sent.svg" alt="bouteille-à-la-mer">
-            <h1>Tu veux me parler ?</h1>
-            <h2>Envoie-moi une bouteille</h2>
-        </div>
-        <div class="form">
-            <form>
-                <div class="flex2Inputs">
-
-                    <div class="flexLeftInp">
-                        <input type="text" name="prenom" id="prenom" required maxlength="35" class="flexInp" placeholder="Entrez votre prénom">
-                    </div>
-    
-                    <div class="flexRightInp">
-                        <input type="email" name="email" id="email" class="emailInp" required maxlength="50" placeholder="Entrez votre email">
-                    </div>
-                    
-                    <textarea name="txt" id="txtArea" cols="50" rows="10"></textarea>
-
-                    <button>Envoyer</button>
-    
-                </div>
-            </form>
-        </div>
-    </main>
-
 
     <!--Footer-->
         <!--Logo footer-->
@@ -95,8 +67,5 @@
                 <p>Réalisation : Alexandra Masi</p>
             </div>
         </div>    
-
-
-
 </body>
 </html>
